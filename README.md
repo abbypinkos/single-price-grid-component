@@ -11,4 +11,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.png)
+![](./screenshot-1.png)
+![](./screenshot-2.png)
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
