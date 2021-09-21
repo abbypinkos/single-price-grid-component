@@ -19,12 +19,16 @@ html {
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     background-color: var(--light-gray);
     font-family: 'Karla', sans-serif;
     font-weight: 400;
     font-size: 1rem;
-    height: 100vh;
+    padding: 2rem 0;
     display: grid;
     place-items: center;
 }
@@ -34,9 +38,9 @@ body {
     border-radius: .5rem;
     overflow: hidden;
     width: 85%;
-    box-shadow: 0 9px 15px 0 rgba(105, 154, 165, 0.363);
+    box-shadow: 0 9px 15px 0 rgba(105, 154, 165, 0.275);
     display: grid;
-    place-items: center;
+    margin: auto 0; 
     grid-template-areas: 
     "item1"
     "item2"
@@ -59,16 +63,15 @@ body {
 
 .yellow-text {
     color: var(--bright-yellow);
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: 700;
-    padding: 1.2rem 0;
-    line-height: 1.2rem;
+    padding: 1.5rem 0 1rem 0;
 }
 
 .gray-text {
     color: var(--gray-blue);
-    font-size: .9rem;
-    line-height: 1.5rem;
+    font-size: .85rem;
+    line-height: 1.7rem;
 }
 
 .grid-item2 {
@@ -89,8 +92,9 @@ body {
 .light-text {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    color: var(--light-gray);
+    gap: .75rem;
+    color: hsl(0deg 0% 100% / 50%);
+    font-size: 1rem;
     padding: .5rem 0;
 }
 
@@ -102,17 +106,19 @@ body {
 
 .white-text {
     color: #fff;
+    font-size: .95rem;
 }
 
 button {
     background-color: var(--bright-yellow);
     color: #fff;
+    font-family: 'Karla', sans-serif;
     font-size: 1rem;
     font-weight: 700;
     border: none;
-    border-radius: .5rem;
+    border-radius: .25rem;
     width: 100%;
-    padding: 1rem 1rem;
+    padding: .9rem 1rem;
     margin-top: 1.8rem;
     box-shadow: 0 9px 15px 5px rgba(30, 112, 109, 0.164);
 }
@@ -135,19 +141,31 @@ button:hover {
 
 .small-light-text p {
     color: var(--light-gray);
-    font-size: .9rem;
+    font-size: .85rem;
     line-height: 1.3rem;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 481px) {
     .grid-container {
-        width: 60%;
+        width: 55%;
+    }
+
+    .title1 {
+        font-size: 1.5rem;
+    }
+    
+    .yellow-text {
+        font-size: 1.1rem;
+    }
+    
+    .gray-text {
+        font-size: .98rem;
     }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 769px) {
     .grid-container {
-        width: 50%;
+        width: 60%;
         grid-template-columns: 50%;
         grid-template-areas: 
         "item1 item1"
@@ -155,6 +173,25 @@ button:hover {
     }
     
     .grid-item1, .grid-item2, .grid-item3 {
-        padding: 2.5rem 2rem;
+        padding: 2.5rem 2.5rem;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .grid-container {
+        width: 55%;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .grid-container {
+        width: 33%;
+    }
+}
+
+@media only screen and (min-width: 1925px) {
+    .grid-container {
+        width: 25%;
+        max-width: 55rem;
     }
 }
